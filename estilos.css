@@ -1,0 +1,481 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*desplazamiento de la página web en "suave"*/
+:root{
+    scroll-behavior: smooth;
+}
+
+/* especificar la familia de fuentes que se utilizará para cuerpo de la pagina web */
+body{ 
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* 1. Ancho-2. ancho máximo-3. Desbordamiento-4. Margen-5. Relleno */
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+
+/* 1. altura--2. Imagen de fondo--3. Repetición de fondo--4. Tamaño del fondo--5. Anexo de antecedentes--6. Posición de fondo (Encabezado) */
+header{
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(159, 138, 209, 0.87) 0%, rgba(79, 61, 74, 0.405) 100%), url(../img/Cartografia.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Alineación de texto--Relleno--Altura--Pantalla--Justificar contenido--Alinear elementos--Dirección de flexión--Color (La informacion de la pagina) */
+.head{
+    text-align: center;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+
+}
+
+/* establecer que los elementos con la clase .indice se fijarán en la esquina superior derecha de la ventana del navegador, tendrán un tamaño de 40x40 píxeles, un fondo blanco, un cursor de puntero, esquinas redondeadas y una sombra  */
+.indice{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+/*configuracion del menú de navegación oculto con posición fija, fondo degradado diagonal, diseño de caja flexible, transición suave y sombra de caja sutil */
+.menu-navegacion{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: transform .3s ease-in-out;
+    transform: translate(110%);
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+/* establecer la posición inicial de los elementos antes de animarlos */
+.spread{
+    transform: translate(0);
+}
+
+/* establecer que los enlaces del menú de navegación tendrán un color blanco y no tendrán ningún tipo de decoración */
+.menu-navegacion{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* hacer que el título sean más grandes y tengan más espacio por debajo */
+.titulo{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+/* realizar que los elementos con la clase .copy  tengan un peso de fuente más liviano, un tamaño de fuente mediano y una alineación de texto centrada.  */
+.copy{
+    font-weight: 300;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+
+.subtitulo{
+    text-align: center;
+    font-weight: 500;
+    color: #201f23;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+/* configurando la seccion de servicios */
+
+.contenedor-servicio{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-servicio img{
+    width: 40%;
+}
+
+.global-servicio{
+    width: 45%;
+}
+
+.service{
+    margin-bottom: 20px;
+}
+
+.n-service{
+    margin-bottom: 7px;
+    color: #9f8ad0;
+}
+
+.p1 {
+    text-align: justify;
+}
+
+.number{
+    display: inline-block;
+    background-image: linear-gradient(to top, #131383 0%, #c2e7fb 100%);
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 30px;
+    margin-right: 7px;
+}
+
+/* Configurando la seccion de galeria*/
+
+.gallery{
+    background: #f2f2f2;
+}
+
+.contenedor-galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.img-galeria{
+    object-fit: cover;
+    width: 30%;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.imagen-light{
+    position: fixed;
+    background: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;
+}
+
+
+/* Configurar mis videos*/
+
+container{
+    /* position: relative;  */
+    min-height: 100vh;
+    background: rgba(227, 224, 224, 0.553);
+}
+
+.container .video-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container .video-container .video{
+    height: 250px;
+    width: 350px;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.container .video-container .video video{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    transition: 2s linear;
+}
+
+.container .popup-video{
+    position: fixed;
+    top: 0;left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, .8);
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.container .popup-video video{
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    border-radius: 5px;
+    border: 3px solid #fff;
+    object-fit: cover;
+}
+
+.container .popup-video span{
+    position: absolute;
+    top: 5px; right: 20px;
+    font-size: 50px;
+    color: #fff;
+    font-weight: bolder;
+    z-index: 100;
+    cursor: pointer;
+}
+
+
+
+.show{
+    transform: translate(0);
+}
+
+.agregar-imagen{
+    object-fit: cover;
+    width: 60%;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform .3s .2s;
+}
+
+.showImage{
+    transform: scale(1);
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+}
+
+/* vamos a modificar la seccion de expertos*/
+
+.experts{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cont-expert{
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cont-expert img{
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.n-expert{
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 400;
+}
+
+/* confifurar el footer */
+
+footer{
+    background: #9f8ad0;
+    padding-bottom: 0.1px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.contact-us{
+    width: 100%;
+    color: #fff;
+}
+
+.brand{
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+}
+
+.brand+p{
+    font-weight: 500;
+    text-align: center;
+}
+
+.social-media{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media-icon{
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+}
+
+.social-media-icon:hover{
+    background: #fff;
+    color: #764ba2;
+}
+
+.social-media-icon i{
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.line{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 60px;
+}
+
+/* Configurando para que nuestra Pagina sea responsive */
+
+@media (max-widht:768px){
+    .container.popup-video video{
+        width: 95%;
+    }
+}
+
+
+@media screen and (max-width:800px){
+    .menu-navegacion{
+        width: 50vw;
+    }
+
+    .titulo{
+        font-size: 40px;
+    }
+    .contenedor-servicio{
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    .global-servicio{
+        width: 80%;
+    }
+    
+    .service{
+        margin-bottom: 30px;
+    }
+
+    .agregar-imagen{
+        width: 80%;
+    }
+
+    .img-galeria{
+        width: 45%;
+    }
+
+    .cont-expert{
+        width: 80%;
+    }
+
+    .footer-content{
+        justify-content: center;
+    }
+
+    .social-media{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+
+    .social-media-icon{
+        margin-left: 0;
+    }
+
+    .social-media i{
+        margin-left: 0;
+    }
+
+    .contact-us{
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+}
+
+
+
+@media screen and (max-width:500px) {
+    .menu-navegacion{
+        width: 65vw;
+    }
+
+    .indice{
+        top: 20px;
+        right: 20px;
+    }
+
+    .titulo{
+        font-size: 30px;
+    }
+
+    .subtitulo{
+        font-size: 30px;
+    }
+
+    .agregar-imagen{
+        width: 95%;
+    }
+
+    .img-galeria{
+        width: 95%;
+    }
+
+    .social-media{
+        width: 100%;
+    }
+
+    .contact-us{
+        width: 90%;
+    }
+
+
+    
+}
+
+
